@@ -3,14 +3,14 @@
 using namespace std;
 
 int main(){
-    std::cout << "Initializing variables\n";
+    cout << "Initializing variables\n";
 
     int number = 39;
     const float pi = 3.14;
     double score = .90;
     char letter = 'Q';
-    string name = "Bikes";
+    string name = "Bikes"; // to use string, using namespace std is necessary
 
-    std::cout <<  pi*number << "\n" << name;
+    cout << number <<"\n" << score << "\n" << pi*number << "\n" << name;
     return 0;
 }
