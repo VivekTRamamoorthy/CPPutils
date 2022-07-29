@@ -90,9 +90,9 @@ public:
     ~Array(){
         // try{
         // free(data);
-        std::cout  << "Destroying array: "<<std::endl;
-        display();
-        delete data;
+        // std::cout  << "Destroying array: "<<std::endl;
+        // display();
+        // delete data;
         // }catch(int e){
         //     std::cout << "error freeing data";
         // }
