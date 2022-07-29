@@ -2,9 +2,9 @@
 #include "SDL2/SDL.h"
 
 using namespace std;
-
-// Run this file only in terminals (not run button) wth `gcc SDLExample.cpp -lSDL2 && ./SDLExample.cpp`
-// The -lSDL2 flag links the library to the compile. brew install sdl2 is a prerequisite.
+// Before compiling this file, install sdl2 using your favorite package manager. Ex `$brew install sdl2`
+// Run this file in terminal using `$g++ SDLExample.cpp -lSDL2 && ./SDLExample.cpp`
+// The -lSDL2 flag links the SDL2 library to the compile. 
 
 int main(int argc, char const *argv[])
 {
@@ -20,7 +20,7 @@ int main(int argc, char const *argv[])
     SDL_RenderClear(renderer);
 
       SDL_RenderPresent(renderer);
-    // if (window == NULL){
+    // if (window == NULL){ // problematic
     //     std::cout << "Couldn't initialize the window"  << SDL_GetError() << std::endl;
     //     return 1;
     // }
