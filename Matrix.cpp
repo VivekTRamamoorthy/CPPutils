@@ -5,15 +5,18 @@ Matrix::Matrix()
 {
     data = NULL;
 };
+void Matrix::AllocateMemory(){
+     data = new double *[rows]; // requesting memory for double pointer array
+    for (size_t row = 0; row < rows; row++)
+    {
+        data[row] = new double[cols]; // assigning double arrays to each pointer
+    }
+}
 Matrix::Matrix(int iRows, int iCols)
 {
     rows = iRows;
     cols = iCols;
-    data = new double *[iRows]; // requesting memory for double pointer array
-    for (size_t row = 0; row < iRows; row++)
-    {
-        data[row] = new double[iCols]; // assigning double arrays to each pointer
-    }
+    AllocateMemory();
 };
 Matrix::Matrix(double iDataArray[], int iRow, int iCol)
 {
@@ -37,7 +40,6 @@ Matrix::~Matrix()
 {
     if (data)
     { // if data points to something
-
         for (int row = 0; row < rows; row++)
         {
             delete[] data[row];
@@ -85,12 +87,14 @@ void Matrix::display()
 };
 std::ostream& operator<<(std::ostream& outStream, const Matrix& matrixToPrint)
 {
+    std::cout << "Matrix (" << matrixToPrint.rows << ", " << matrixToPrint.cols << "): " << std::endl;
     for (int i = 0; i < matrixToPrint.rows; ++i) {
-        outStream << matrixToPrint.data[i][0];
+        outStream << "   "<< matrixToPrint.data[i][0];
         for (int j = 1; j < matrixToPrint.cols; ++j) {
-            outStream << " " << matrixToPrint.data[i][j];
+            outStream << "  " << matrixToPrint.data[i][j];
         }
-        outStream << std::endl;
+        std::cout << "   " << std::endl;
     }
+
     return outStream;
 }
