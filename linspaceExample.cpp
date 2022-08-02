@@ -4,12 +4,12 @@ using namespace MatlabCPP;
 int main(int argc, char const *argv[])
 {
     int length;
-    double start = 1;
+    double start = 0;
     double end = 100;
-    length = 100;
-    Array array;
-    array = linspace(start, end, length);
+    length = 6;
+    Array array = linspace(start, end, length);
     display(array);
+    array.display();
     return 0;
 }
 

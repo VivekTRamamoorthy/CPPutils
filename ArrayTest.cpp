@@ -14,16 +14,16 @@ int main(int argc, char const *argv[])
     // Array class testing script
 
     Array arr1(10);
-    arr1.display();
     arr1 += 1.0;
     arr1.display();
+    // arr1.display();
     // Array uninitiated;
 
     // Array arr2 = Array(10);
     // arr2 = arr1+1.0;
     // Array arr2 = new Array(double a[]={1.0, 2.0, 3.0},3);
 
-    createAndDestroyAnArray();
+    // createAndDestroyAnArray();
 
     // std::cout
     return 0;

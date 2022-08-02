@@ -20,7 +20,7 @@ namespace MatlabCPP
         double data[length];
         for (int i = 0; i < length; i++)
         {
-            data[i]=start+(end-start)/length *(i+1);
+            data[i]=start+(end-start)/(length-1) *i;
         }
         
         Array result= Array(data, length);
